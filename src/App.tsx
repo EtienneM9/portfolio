@@ -33,7 +33,7 @@ function App() {
           <div className="mb-8 fade-in-down">
             <div className="text-center">
               <img
-                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop"
+                src="assets/pp.jpg"
                 alt="Profile"
                 className="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-violet-500 shadow-lg"
               />
@@ -43,7 +43,7 @@ function App() {
             
             <div className="mb-8">
               <p className="text-gray-100 mb-6 max-w-2xl mx-auto text-center">
-                Passionné par l'analyse de données et l'intelligence artificielle, je transforme des données complexes en insights actionnables. Mon expertise couvre l'ensemble du spectre de la data science, de l'analyse exploratoire à la modélisation prédictive.
+                Etudiant en Première année de master informatique spécialité Intelligence Artificielle et Science des Données (IASD) à l'unniversité de Montpelleir, je suis passionné par ce domaine et ses application dans nombreaux secteurs me tenant à coeur comme le sport, le spatial, la finance...
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -76,13 +76,13 @@ function App() {
                   Télécharger CV
                 </a>
                 <div className="flex gap-4">
-                  <a href="https://github.com" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
+                  <a href="https://github.com/EtienneM9" target="_blank" rel="noopener noreferrer" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
                     <Github size={20} />
                   </a>
-                  <a href="https://linkedin.com" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
+                  <a href="https://www.linkedin.com/in/etienne-moussa-67b246276/" target="_blank" rel="noopener noreferrer" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
                     <Linkedin size={20} />
                   </a>
-                  <a href="mailto:contact@example.com" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
+                  <a href="etiennemoussa55@gmail.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors">
                     <Mail size={20} />
                   </a>
                 </div>
@@ -130,7 +130,7 @@ function App() {
                   <div className="project-card-back bg-violet-900 bg-opacity-90 p-6 flex flex-col justify-center items-center">
                     <div className="space-y-4">
                       <a 
-                        href={project.github} 
+                        href={project.github} target="_blank" rel="noopener noreferrer"
                         className="flex items-center gap-2 px-6 py-3 bg-black bg-opacity-50 rounded-lg hover:bg-blue-500 transition-colors"
                       >
                         <Github size={20} />
@@ -153,7 +153,7 @@ function App() {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-black bg-opacity-30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center fade-in-up">Formation</h2>
           <div className="timeline relative">
@@ -221,15 +221,15 @@ const skills = [
 const projects = [
   {
     name: "Projet Vidal",
-    description: "Application ayant pour but d'aider les médecins pour les prescriptions médicales en fonction des pathologies des patients.",
+    description: "Application réalisée dans le cadre d'un projet de fin de L3, ayant pour but d'aider les médecins pour les prescriptions médicales en fonction des pathologies des patients.",
     github: "https://github.com/FranckRvEtu/ter-vidal",
     demo: "https://demo.example.com/trading-bot"
   },
   {
     name: "Portfolio Website",
     description: "Site portfolio personnel pour présenter mes projets, compétences et expériences professionnelles.",
-    github: "https://github.com/username/data-pipeline",
-    demo: "https://demo.example.com/data-pipeline"
+    github: "https://github.com/EtienneM9/portfolio",
+    demo: "https://github.com/EtienneM9/portfolio"
   },
   {
     name: "Chatbot Mistral intégration",
@@ -245,7 +245,7 @@ const projects = [
   },
   {
     name: "Solana project",
-    description: "Premier programme sur la blockchain Solana (utilisant, Rust Typescript et La biliothèque solana) pour apprendre à développer dans cet environement",
+    description: "Premier programme sur la blockchain Solana (utilisant, Rust, Typescript et La biliothèque Solana) pour apprendre à développer dans cet environement",
     github: "https://github.com/EtienneM9/Rust_for_Solana",
     demo: "https://demo.example.com/cv-detection"
   }
@@ -256,7 +256,7 @@ const education = [
     degree: "Master IASD (Intelligence Artificielle, SCience des Données)",
     school: "Université de Montepllier",
     year: "En cours",
-    description: "Spécialisation en apprentissage automatique et traitement des données massives"
+    description: "En cours"
   },
   {
     degree: "Licence Informatique",

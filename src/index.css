@@ -9,10 +9,11 @@
   
   body {
     background: 
-      radial-gradient(circle at 20% 30%, rgba(147, 51, 234, 0.05) 0%, transparent 25%),
-      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 20%),
-      radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 30%),
-      #0a0a0a;
+      radial-gradient(circle at 20% 30%, rgba(4, 236, 147, 0.39) 0%, transparent 25%),
+      radial-gradient(circle at 80% 10%, rgba(8, 2, 175, 0.692) 0%, transparent 25%),
+      radial-gradient(circle at 50% 50%, rgba(217, 4, 245, 0.445) 0%, transparent 25%),
+      radial-gradient(circle at 85% 80%, rgba(4, 217, 245, 0.479) 0%, transparent 25%), 
+      #000000;
     min-height: 100vh;
   }
 }
@@ -68,8 +69,8 @@
 .timeline::after {
   content: '';
   position: absolute;
-  width: 2px;
-  background: linear-gradient(to bottom, #8B5CF6, #3B82F6, #9333EA);
+  width: 5px;
+  background: linear-gradient(to bottom, #4a00f7, #03fc94, #c704e0);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -77,8 +78,8 @@
 }
 
 .timeline-dot {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
