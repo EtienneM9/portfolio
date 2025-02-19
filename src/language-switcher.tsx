@@ -51,18 +51,7 @@ export const LanguageSwitcher = () => {
           language === 'en' ? 'border-white scale-110' : 'border-transparent'
         }`}
       >
-        <div className="w-full h-full relative">
-          <div className="absolute inset-0 bg-blue-600">
-            <div className="absolute inset-0 grid grid-cols-8 grid-rows-5">
-              <div className="col-span-3 row-span-3 bg-white">
-                <div className="w-full h-full relative">
-                  <div className="absolute inset-0 bg-red-600" style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 0)' }}></div>
-                  <div className="absolute inset-0 bg-red-600 rotate-90" style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 0)' }}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+         <img src="assets/uk_flag.png" alt="English" className="w-full h-full object-cover" />
       </button>
     </div>
   );

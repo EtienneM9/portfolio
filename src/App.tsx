@@ -75,7 +75,7 @@ function App() {
                 <h3 className="text-xl font-bold mb-12 text-center fade-in-up">
                   {translations[language].interests}:
                 </h3>
-
+                {/* Les intérêts */}
                 <div className="flex flex-wrap justify-center gap-4 mb-6">
                   {interests.map((interest) => (
                     <button
@@ -99,6 +99,20 @@ function App() {
                         ? interests.find(i => i.title === activeInterest)?.description
                         : interests.find(i => i.title === activeInterest)?.descriptionEn}
                     </p>
+
+                    {/* Affichage du bouton Strava seulement pour "sport" */}
+                    {activeInterest === "Sport" && (
+                      <div className="flex justify-center mt-4">
+                        <a 
+                          href="https://www.strava.com/athletes/38491897" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors transition"
+                        >
+                          <img src="assets/strava-icon.svg" alt="Pour les sportifs ;)" className="w-6 h-6" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 )}
 

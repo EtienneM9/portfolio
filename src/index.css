@@ -78,6 +78,7 @@
   }
 }
 
+/* les animations */ 
 .fade-in-up {
   opacity: 0;
   transform: translateY(20px);
@@ -122,6 +123,8 @@
   transform: translateX(0);
 }
 
+/* la timeline des formations */
+
 .timeline {
   position: relative;
 }
@@ -154,6 +157,8 @@
   min-height: 10px; /* Ajoute une hauteur minimum */
 }
 
+/* les centres d'intérêts*/
+
 .interest-description {
   max-height: 0;
   overflow: hidden;
@@ -163,6 +168,9 @@
 .interest-description.active {
   max-height: 200px;
 }
+
+
+/* les projets */
 
 .project-card {
   perspective: 1000px;
