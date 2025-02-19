@@ -55,7 +55,7 @@ function App() {
             <div className="mb-8 fade-in-down">
               <div className="text-center">
                 <img
-                  src="assets/pp.jpg"
+                  src="/assets/pp.jpg"
                   alt="Profile"
                   className="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-violet-500 shadow-lg"
                 />
@@ -109,7 +109,7 @@ function App() {
                           rel="noopener noreferrer"
                           className="p-3 bg-black bg-opacity-50 hover:bg-violet-500 hover:bg-opacity-30 rounded-lg transition-colors transition"
                         >
-                          <img src="assets/strava-icon.svg" alt="Pour les sportifs ;)" className="w-6 h-6" />
+                          <img src="/assets/strava-icon.svg" alt="Pour les sportifs ;)" className="w-6 h-6" />
                         </a>
                       </div>
                     )}

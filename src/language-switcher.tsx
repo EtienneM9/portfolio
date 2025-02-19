@@ -51,7 +51,7 @@ export const LanguageSwitcher = () => {
           language === 'en' ? 'border-white scale-110' : 'border-transparent'
         }`}
       >
-         <img src="assets/uk_flag.png" alt="English" className="w-full h-full object-cover" />
+         <img src="/assets/uk_flag.png" alt="English" className="w-full h-full object-cover" />
       </button>
     </div>
   );
