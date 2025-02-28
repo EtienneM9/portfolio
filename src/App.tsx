@@ -50,23 +50,23 @@ function App() {
 
       <div className="min-h-screen text-gray-100">
         {/* Header/Hero Section */}
-        <section className="min-h-screen flex items-center justify-center relative px-4 py-16 bg-black bg-opacity-40 backdrop-blur-sm">
-          <div className="max-w-4xl mx-auto">
+        <section className="min-h-screen flex items-center justify-center relative px-4 py-16 bg-black bg-opacity-40 backdrop-blur-sm md:px-8 lg:px-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-8 fade-in-down">
-              <div className="text-center">
+              <div className="text-center px-4 sm:px-6 lg:px-8">
                 <img
                   src="/assets/pp.jpg"
                   alt="Profile"
-                  className="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-violet-500 shadow-lg"
+                  className="w-32 h-32 sm:w-48 sm:h-48 rounded-full mx-auto mb-6 border-4 border-violet-500 shadow-lg"
                 />
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Étienne</h1>
-                <h2 className="text-xl md:text-2xl text-blue-400 mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Étienne</h1>
+                <h2 className="text-lg sm:text-xl md:text-2xl text-blue-400 mb-6">
                   {translations[language].title}
                 </h2>
               </div>
               
               <div className="mb-8">
-                <p className="text-gray-100 mb-6 max-w-2xl mx-auto text-center">
+                <p className="text-gray-100 mb-6 max-w-2xl mx-auto text-center text-sm sm:text-base md:text-lg">
                   {translations[language].about}
                 </p>
                 <p className="text-gray-100 mb-6 max-w-2xl mx-auto text-center">
@@ -76,7 +76,7 @@ function App() {
                   {translations[language].interests}:
                 </h3>
                 {/* Les intérêts */}
-                <div className="flex flex-wrap justify-center gap-4 mb-6">
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
                   {interests.map((interest) => (
                     <button
                       key={interest.title}
@@ -116,8 +116,8 @@ function App() {
                   </div>
                 )}
 
-                <div className="flex justify-center gap-4">
-                  <a href="/cv.pdf" className="flex items-center gap-2 bg-violet-500 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors">
+                <div className="flex justify-center gap-2 sm:gap-4">
+                  <a href="public/assets/cv.pdf" download="cvEtienneMoussa.pdf" className="flex items-center gap-2 bg-violet-500 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition-colors">
                     <Download size={20} />
                     {translations[language].downloadCV}
                   </a>
@@ -139,12 +139,12 @@ function App() {
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 px-4">
+        <section className="py-10 px-4 sm:py-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center fade-in-up">
               {translations[language].skills}
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {skills.map((skill, index) => (
                 <div 
                   key={skill.name} 
@@ -164,12 +164,12 @@ function App() {
         </section>
 
         {/* Projects Section */}
-        <section className="py-20 px-4 bg-black bg-opacity-30">
+        <section className="py-10 px-4 sm:py-20 bg-black bg-opacity-30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center fade-in-up">
               {translations[language].projects}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
               {projects.map((project, index) => (
                 <div 
                   key={project.name} 
@@ -213,32 +213,39 @@ function App() {
         </section>
 
         {/* Education Section */}
-        <section className="py-20 px-4 bg-black bg-opacity-30">
+        <section className="py-10 px-4 sm:py-20 bg-black bg-opacity-30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center fade-in-up">
               {translations[language].education}
             </h2>
             <div className="timeline relative">
               {education.map((edu, index) => (
-                <div key={edu.degree} className="timeline-item relative">
+                <div key={edu.degree} className="timeline-item relative mb-8">
+                  {/* Timeline connector - visible only on sm screens and up */}
+                  <div className="hidden sm:block absolute h-full w-0.5 bg-violet-500 opacity-30 left-1/2 transform -translate-x-1/2 top-0 z-0"></div>
+                  
+                  {/* Timeline dot - visible only on sm screens and up */}
                   <div 
-                    className="timeline-dot"
+                    className="hidden sm:block absolute w-4 h-4 rounded-full z-10 left-1/2 transform -translate-x-1/2 top-6"
                     style={{
-                      background: `${index % 3 === 0 ? '#8B5CF6' : index % 3 === 1 ? '#3B82F6' : '#9333EA'}`,
-                      top: '50%'
+                      background: `${index % 3 === 0 ? '#8B5CF6' : index % 3 === 1 ? '#3B82F6' : '#9333EA'}`
                     }}
                   />
+                  
+                  {/* Content container - responsive layout */}
                   <div 
-                    className={`w-5/12 ${
-                      index % 2 === 0 ? 'ml-0 mr-auto pr-12 fade-in-left' : 'ml-auto pl-12 fade-in-right'
+                    className={`w-full sm:w-5/12 ${
+                      index % 2 === 0 
+                        ? 'sm:ml-0 sm:mr-auto sm:pr-8 fade-in-left' 
+                        : 'sm:ml-auto sm:mr-0 sm:pl-8 fade-in-right'
                     }`}
                   >
                     <div className="bg-black bg-opacity-50 p-6 rounded-lg hover:bg-opacity-70 transition-all duration-300 border border-blue-500 border-opacity-20">
-                      <div className="flex justify-between items-start mb-2">
+                      <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
                         <h3 className="text-xl font-semibold">
                           {language === 'fr' ? edu.degreeFr : edu.degree}
                         </h3>
-                        <span className="text-blue-400">
+                        <span className="text-blue-400 mt-2 sm:mt-0">
                           {language === 'fr' ? edu.yearFr : edu.year}
                         </span>
                       </div>
@@ -258,136 +265,9 @@ function App() {
           </div>
         </section>
       </div>
+
     </>
   );
 }
-
-/*
-const skills = [
-  {
-    name: "Python",
-    description: "Expertise en développement d'applications et analyse de données avec Python, incluant les frameworks pandas, numpy, et scikit-learn."
-  },
-  {
-    name: "Machine Learning",
-    description: "Conception et implémentation de modèles prédictifs, classification et clustering pour des applications business."
-  },
-  {
-    name: "SGBD / Data Warehouse /Big Data",
-    description: "Maîtrise des différents SGBD (Oracle, PostgreSQL, MongoDB...) ainsi que de la conception de DataWarehouse et des outils Big Data (Hadoop)"
-  },
-  {
-    name: "IA symbolique",
-    description: "Maitrise des techniques d'IA symbolique (logique, raisonnement, CSP...) et de leur application dans les systèmes experts."
-  },
-  {
-    name: "Dev Full Stack",
-    description: "Développement de diverses applications à laide des stack MERN, MEAN, SpringBoot, Flask... Utilisation de MaterialDesign, TailwindCSS... Pour des UI/UX modernes."
-  },
-  {
-    name: "Dev Mobile",
-    description: "Développement d'applications mobiles avec Kotlin ou Java. Maitrise d'Android Studio."
-  }
-];
-
-const projects = [
-  {
-    name: "Projet Vidal",
-    description: "Application réalisée dans le cadre d'un projet de fin de L3, ayant pour but d'aider les médecins pour les prescriptions médicales en fonction des pathologies des patients.",
-    github: "https://github.com/FranckRvEtu/ter-vidal",
-    demo: "https://demo.example.com/trading-bot"
-  },
-  {
-    name: "Portfolio Website",
-    description: "Site portfolio personnel pour présenter mes projets, compétences et expériences professionnelles.",
-    github: "https://github.com/EtienneM9/portfolio",
-    demo: "https://github.com/EtienneM9/portfolio"
-  },
-  {
-    name: "Chatbot Mistral intégration",
-    description: "Chatbot intégrant l'api Mistral ayant pour but d'aider les enfants dans leur apprentissage des maths.",
-    github: "https://github.com/username/nlp-analysis",
-    demo: "https://demo.example.com/nlp-analysis"
-  },
-  {
-    name: "SNCF API intégration",
-    description: "Application mobile intégrant l'API SNCF pour afficher les trajets disponibles selon les horaires et les gares.",
-    github: "https://github.com/EtienneM9/SNCFApp",
-    demo: "https://demo.example.com/cv-detection"
-  },
-  {
-    name: "Solana project",
-    description: "Premier programme sur la blockchain Solana (utilisant, Rust, Typescript et La biliothèque Solana) pour apprendre à développer dans cet environement",
-    github: "https://github.com/EtienneM9/Rust_for_Solana",
-    demo: "https://demo.example.com/cv-detection"
-  },
-  {
-    name: "AI choice project",
-    description: "(En cours ) Projet ayant pour but d'entraîner une IA à répliquer les choix humains face à certaines situations.",
-    github: "",
-    demo: ""
-  }
-];
-
-const education = [
-  {
-    degree: "Master IASD (Intelligence Artificielle, SCience des Données)",
-    school: "Université de Montepllier",
-    year: "En cours",
-    description: "En cours"
-  },
-  {
-    degree: "Licence Informatique",
-    school: "Université de Montpellier",
-    year: "2021-2024",
-    description: "admis session 1"
-  },
-  {
-    degree: "Baccalauréat Générale",
-    school: "Lycée Théophile Roussel",
-    year: "2021",
-    description: "Mention Bien - Spécialité Mathématiques, Informatique, LLCE Anglais - Option Section Européenne Anglais"
-  },
-  {
-    degree: "Cambridge English Certificate (B2)",
-    school: "Cambridge Assessment English",
-    year: "2021",
-    description: "A cause du COVID, Cambridge n'a pas envoyé d'examinateurs pour la partie orale qui nous a été comptabilisée comme un 0, d'où niveau B2 et non C1"
-  },
-  {
-    degree: "CQPET (Certificat de Qualification Professionnelle Educateur Tennis)",
-    school: "Fédération Française de Tennis",
-    year: "2021",
-    description: "Encadrement de groupes d'enfant/ados et adultes pour des cours de tennis, Organisation d'animations et évènements"
-  }
-];
-
-const interests = [
-  {
-    title: "Sport",
-    description: "Sportif depuis petit, je pratique régulièrement le tennis, la musculation, la course à pied, le vtt... Le sport est pour moi un aspect essentiel du développement personnel.",
-  },
-  {
-    title: "Intelligence Artificielle",
-    description: "Fasciné par les avancées en IA générative et l'apprentissage par renforcement. Participation active à des projets de recherche."
-  },
-  {
-    title: "Blockchain",
-    description: "Exploration des technologies blockchain et leur potentiel pour la décentralisation des applications et des services."
-  },
-  {
-    title: "Spatial",
-    description: "Passionné par l'exploration spatiale, les nouvelles technologies et innovations liées au domaine"
-  },
-  {
-    title: "Géopolitique",
-    description: "La géopolitique et un sujet qui m'intérèsse car c'est pour moi un domaine permettant de mieux comprendre le monde qui nous entoure et les enjeux actuels."
-  },
-  {
-    title: "Finance",
-    description: "L'éducation financière étant un manque chez la plupart des gens, je m'intéresse à ce domaine pour être en capacité de gérer et développer mes finances de manière intelligente"
-  }
-];
-*/
 
 export default App;
