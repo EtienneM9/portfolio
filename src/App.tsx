@@ -219,11 +219,11 @@ function App() {
               {translations[language].education}
             </h2>
             <div className="timeline relative">
+              {/* Timeline connector - background line that runs through the whole timeline */}
+              <div className="hidden sm:block absolute h-full w-0.5 bg-violet-500 opacity-30 left-1/2 transform -translate-x-1/2 top-0 z-0"></div>
+              
               {education.map((edu, index) => (
                 <div key={edu.degree} className="timeline-item relative mb-8">
-                  {/* Timeline connector - visible only on sm screens and up */}
-                  <div className="hidden sm:block absolute h-full w-0.5 bg-violet-500 opacity-30 left-1/2 transform -translate-x-1/2 top-0 z-0"></div>
-                  
                   {/* Timeline dot - visible only on sm screens and up */}
                   <div 
                     className="hidden sm:block absolute w-4 h-4 rounded-full z-10 left-1/2 transform -translate-x-1/2 top-6"
@@ -234,7 +234,7 @@ function App() {
                   
                   {/* Content container - responsive layout */}
                   <div 
-                    className={`w-full sm:w-5/12 ${
+                    className={`w-full sm:w-5/12 z-20 relative ${
                       index % 2 === 0 
                         ? 'sm:ml-0 sm:mr-auto sm:pr-8 fade-in-left' 
                         : 'sm:ml-auto sm:mr-0 sm:pl-8 fade-in-right'
