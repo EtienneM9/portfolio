@@ -65,13 +65,13 @@ export const skills = [
   {
     name: "Full Stack Development",
     nameFr: "Dev Full Stack",
-    description: "Development of various applications using MERN, MEAN, SpringBoot, Flask stacks... Using MaterialDesign, TailwindCSS... For modern UI/UX.",
-    descriptionFr: "Développement de diverses applications à l'aide des stack MERN, MEAN, SpringBoot, Flask... Utilisation de MaterialDesign, TailwindCSS... Pour des UI/UX modernes."
+    description: "Advanced web development using modern frameworks (Nestjs/nextsjs/Mongo, MEAN/MERN stack, Vuejs, Springboot, Flask) and advanced UI/UX with tailwindcss, framer-motion, react-libs...",
+    descriptionFr: "Développement web avancé grâce à des frameworks modernes (Nestjs/nextsjs/Mongo, Stack MEAN/MERN, Vuejs, Springboot, Flask) et UI/UX anvancé avec tailwindcss, framer-motion, react-libs..."
   },
   {
     name: "Mobile Development",
     nameFr: "Dev Mobile",
-    description: "Mobile application development with Kotlin or Java. Mastery of Android Studio.",
+    description: "Mobile application development with Kotlin or Java using Android Studio.",
     descriptionFr: "Développement d'applications mobiles avec Kotlin ou Java. Maîtrise d'Android Studio."
   }
 ];
@@ -83,7 +83,7 @@ export const projects = [
     description: "Application developed as part of a final L3 project, aimed at helping doctors with medical prescriptions based on patient pathologies.",
     descriptionFr: "Application réalisée dans le cadre d'un projet de fin de L3, ayant pour but d'aider les médecins pour les prescriptions médicales en fonction des pathologies des patients.",
     github: "https://github.com/FranckRvEtu/ter-vidal",
-    demo: "https://demo.example.com/trading-bot"
+    demo: "https://github.com/FranckRvEtu/ter-vidal"
   },
   {
     name: "Portfolio Website",
@@ -99,7 +99,7 @@ export const projects = [
     description: "Chatbot integrating the Mistral API to help children learn mathematics.",
     descriptionFr: "Chatbot intégrant l'API Mistral ayant pour but d'aider les enfants dans leur apprentissage des maths.",
     github: "https://github.com/username/nlp-analysis",
-    demo: "https://demo.example.com/nlp-analysis"
+    demo: "https://chatbot-mistral-api.vercel.app/"
   },
   {
     name: "SNCF API Integration",
@@ -107,7 +107,7 @@ export const projects = [
     description: "Mobile application integrating the SNCF API to display available routes according to schedules and stations.",
     descriptionFr: "Application mobile intégrant l'API SNCF pour afficher les trajets disponibles selon les horaires et les gares.",
     github: "https://github.com/EtienneM9/SNCFApp",
-    demo: "https://demo.example.com/cv-detection"
+    demo: "https://github.com/EtienneM9/SNCFApp"
   },
   {
     name: "Solana Project",
@@ -115,7 +115,7 @@ export const projects = [
     description: "First program on the Solana blockchain (using Rust, Typescript and the Solana library) to learn development in this environment.",
     descriptionFr: "Premier programme sur la blockchain Solana (utilisant, Rust, Typescript et la bibliothèque Solana) pour apprendre à développer dans cet environnement.",
     github: "https://github.com/EtienneM9/Rust_for_Solana",
-    demo: "https://demo.example.com/cv-detection"
+    demo: "https://github.com/EtienneM9/Rust_for_Solana"
   },
   {
     name: "AI Choice Project",
